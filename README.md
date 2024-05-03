@@ -1,6 +1,6 @@
 # To-Do List
 
-Este é um projeto simples de uma lista de tarefas (to-do list) feito em HTML, CSS e JavaScript.
+Este é um projeto de uma lista de tarefa feito em HTML, CSS e JavaScript.
 
 ## Descrição
 
