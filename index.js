@@ -1,5 +1,30 @@
 let tasks = []
 
+
+
+const input = document.querySelector("input");
+const inputs = document.querySelector("#inputs");
+
+
+input.addEventListener("click", (e) => {
+    createNewInput();
+})
+
+function createNewInput(){
+
+    const newInput = document.createElement("input");
+    newInput.setAttribute("type", "text");
+    newInput.setAttribute("id", "input");
+
+    inputs.appendChild(newInput);
+
+    newInput.addEventListener("click", (event) => {
+            createNewInput();
+        });
+}
+
+
+
 function renderTaskONHTML(task, done = false){
     const ul = document.querySelector("#tasks")
     const li = document.createElement("li");
@@ -17,8 +42,10 @@ function renderTaskONHTML(task, done = false){
         
         if (done){
             spanToggle.style.textDecoration = "line-through"
+            spanToggle.style.color = "grey"
         }
         else{
+            spanToggle.style.color = "black"
             spanToggle.style.textDecoration = "none"
         }
 
