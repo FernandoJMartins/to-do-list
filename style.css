@@ -16,6 +16,7 @@ main{
 
 h1{
     margin: 5vh 0;
+    font-family: 'Doto';
 }
 
 section{
@@ -36,26 +37,116 @@ span{
 
 
 #to-do-form{
-    padding: 50px;
+    width: 500px;
+    padding: 10px;
+    height: auto;
     background-color: #606c38;
     border: 0.5px solid black;
     border-radius: 10px;
+
 }
 
 #add-task {
+    width: 30%;
+    height: 40px;
     background-color: #283618;
     color: white;
     border: 0.5px solid black;
     border-radius: 5px;
-    padding: 8px;
-    margin: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 
 }
 
-input {
+#input {
     padding: 8px;
-    width: 100%;
+    width: 65%;
+    height: 40px;
     border-radius: 5px;
     border: 0.5px solid black;
     background-color: #fefae0;
+    margin: 0 auto;
+}
+
+#inputs {
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+
+h2{
+    display: flex;
+    justify-content: start;
+    margin: 5px 10px;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #606c38;
+
+
+
+    margin: 0 auto;
+}
+
+
+li:first-child {
+    border-top: 0.2px dotted black;
+}
+li {
+    display: flex;
+    justify-content: start;
+    padding: 5px;
+    border-bottom: 0.1px dotted black;
+    align-items: center;
+    width: 100%;
+}
+
+.ck {
+    width: 40px;
+    height: 20px;   
+    margin-right: 10px;
+}
+
+
+
+.rmv {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+
+}
+
+.rmv:hover {
+    cursor: pointer
+}
+
+span {
+    width: 500px;
+    display: flex;
+    justify-content: start;
+
+}
+
+li div{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    color: #fefae0;
+}
+
+li span {
+    margin: 0 auto;
+}
+
+h1 {
+    color: #fefae0;
+}
+
+input, span {
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

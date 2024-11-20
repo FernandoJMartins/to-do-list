@@ -1,33 +1,16 @@
 let tasks = []
 
 
-
-const input = document.querySelector("input");
 const inputs = document.querySelector("#inputs");
+const input = document.querySelector("input");
 
-
-input.addEventListener("click", (e) => {
-    createNewInput();
-})
-
-function createNewInput(){
-
-    const newInput = document.createElement("input");
-    newInput.setAttribute("type", "text");
-    newInput.setAttribute("id", "input");
-
-    inputs.appendChild(newInput);
-
-    newInput.addEventListener("click", (event) => {
-            createNewInput();
-        });
-}
 
 
 
 function renderTaskONHTML(task, done = false){
     const ul = document.querySelector("#tasks")
     const li = document.createElement("li");
+    const div = document.createElement("div");
 
     const input = document.createElement("input");
     input.setAttribute("type", "checkbox")
@@ -41,11 +24,11 @@ function renderTaskONHTML(task, done = false){
 
         
         if (done){
-            spanToggle.style.textDecoration = "line-through"
-            spanToggle.style.color = "grey"
+            spanToggle.style.textDecoration = "line-through";
+            spanToggle.style.color = "#111111";
         }
         else{
-            spanToggle.style.color = "black"
+            spanToggle.style.color = "#fefae0"
             spanToggle.style.textDecoration = "none"
         }
 
@@ -63,17 +46,21 @@ function renderTaskONHTML(task, done = false){
 
 
     const span = document.createElement("span");
+    span.style.color = "#fefae0";
     span.textContent = task
 
     if (done){
-        span.style.textDecoration = "line-through"
+        span.style.textDecoration = "line-through";
+        span.style.color = "#111111";
+        
     }
 
     const btn = document.createElement("button")
     btn.className = "rmv"
     btn.textContent = "X"
+    btn.style.color = "#fefae0"
     btn.addEventListener("click", (event) => {
-        const liToRemove = event.target.parentElement
+        const liToRemove = event.target.parentElement.parentElement;
         const taskRemove = liToRemove.querySelector("span").
         textContent
 
@@ -83,10 +70,11 @@ function renderTaskONHTML(task, done = false){
         localStorage.setItem("tasks", JSON.stringify(tasks))
     })
 
+    div.appendChild(btn);
     
     li.appendChild(input)
     li.appendChild(span);
-    li.appendChild(btn);
+    li.appendChild(div);
 
     ul.appendChild(li)
 }

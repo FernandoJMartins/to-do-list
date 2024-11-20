@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
         <form id="to-do-form" onsubmit="return addTask(event)">
-            <h1>To-do List</h1>
+            <h1>Do Check Me</h1>
             <div id="inputs">
                 <input id="input" type="text" placeholder="clean the house">
+                <button id="add-task" type="submit">Add task</button>
             </div>
-            <button id="add-task" type="submit">Add task</button>
+
             <section>
                 <ul id="tasks">
                 </ul>
